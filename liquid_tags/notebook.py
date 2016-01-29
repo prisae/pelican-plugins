@@ -54,6 +54,7 @@ override some of the `ipynb.css`-styles, which you can put into
 `/theme/css/ipynb_mod.css`.
 
 """
+import warnings
 import re
 import os
 from functools import partial
@@ -70,6 +71,11 @@ except:
 
 if not IPYTHON_VERSION >= 1:
     raise ValueError("IPython version 1.0+ required for notebook tag")
+
+if IPYTHON_VERSION > 1:
+    warnings.warn("Pelican plugin is not designed to work with IPython "
+                  "versions greater than 1.x. CSS styles have changed in "
+                  "later releases.")
 
 try:
     from nbconvert.filters.highlight import _pygments_highlight
