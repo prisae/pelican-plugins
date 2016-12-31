@@ -36,6 +36,8 @@ Plugin descriptions
 ========================  ===========================================================
 Plugin                    Description
 ========================  ===========================================================
+Ace Editor                Replace default **<code>** by an Ace__ code editor with settings configure on pelicanconf.py.
+
 Always modified           Copy created date metadata into modified date for easy "latest updates" indexes
 
 AsciiDoc reader           Use AsciiDoc to write your posts.
@@ -51,6 +53,8 @@ Better code line numbers  Allow code blocks with line numbers to wrap
 Better code samples       Wraps ``table`` blocks with ``div > .hilitewrapper > .codehilitetable`` class attribute, allowing for scrollable code blocks.
 
 Better figures/samples    Adds a ``style="width: ???px; height: auto;"`` attribute to any ``<img>`` tags in the content
+
+bootstrap-rst             Provides most (though not all) of Bootstrap's features as rst directives
 
 bootstrapify              Automatically add bootstraps default classes to your content
 
@@ -70,6 +74,8 @@ Custom article URLs       Adds support for defining different default URLs for d
 
 Dateish                   Treat arbitrary metadata fields as datetime objects
 
+Dead Links                Manage dead links (website not available, errors such as 403, 404)
+
 Disqus static comments    Adds a disqus_comments property to all articles. Comments are fetched at generation time using disqus API
 
 Encrypt content           Password protect pages and articles
@@ -84,6 +90,8 @@ Figure References         Provides a system to number and references figures
 
 Filetime from Git         Uses Git commit to determine page date
 
+Filetime from Hg          Uses Mercurial commit to determine page date
+
 Footer Insert             Add standardized footer (e.g., author information) at end of every article
 
 GA Page View              Display Google Analytics page views on individual articles and pages
@@ -95,6 +103,8 @@ Gist directive            This plugin adds a ``gist`` reStructuredText directive
 GitHub activity           On the template side, you just have to iterate over the ``github_activity`` variable
 
 Global license            Allows you to define a ``LICENSE`` setting and adds the contents of that license variable to the article's context
+
+Glossary                  Adds a variable containing definitions extracted from definition lists in articles and pages. This variable is visible to all page templates.
 
 Goodreads activity        Lists books from your Goodreads shelves
 
@@ -118,11 +128,15 @@ Image Process             Automates the processing of images based on their clas
 
 Interlinks                Lets you add frequently used URLs to your markup using short keywords
 
+Jinja2 Content            Allows the use of Jinja2 template code in articles, including ``include`` and ``import`` statements. Replacement for pelican-jinja2content.
+
 Just table                Easily create tables in articles
 
 Libravatar                Allows inclusion of user profile pictures from libravatar.org
 
 Link Class                Allows the insertion of class attributes into generated <a> elements (Markdown only)
+
+Linker                    Allows the definition of custom linker commands in analogy to the builtin ``{filename}``, ``{attach}``, ``{category}``, ``{tag}``, ``{author}``, and ``{index}`` syntax
 
 Liquid-style tags         Allows liquid-style tags to be inserted into markdown within Pelican documents
 
@@ -188,6 +202,8 @@ pelicanfly                Lets you type things like ``i ♥ :fa-coffee:`` in you
 
 Photos                    Add a photo or a gallery of photos to an article, or include photos in the body text. Resize photos as needed.
 
+permalink                 Enables a kind of permalink using html redirects.
+
 Pin to top                Pin Pelican's article(s) to top "Sticky article"
 
 PlantUML                  Allows you to define UML diagrams directly into rst documents using the great PlantUML tool
@@ -216,6 +232,8 @@ Series                    Groups related articles into a series
 
 Share post                Creates share URLs of article
 
+Show Source               Place a link to the source text of your posts.
+
 Simple footnotes          Adds footnotes to blog posts
 
 Sitemap                   Generates plain-text or XML sitemaps
@@ -232,6 +250,8 @@ Summary                   Allows easy, variable length summaries directly embedd
 
 tag_cloud                 Provides a tag_cloud
 
+Textile Reader            Adds support for Textile markup
+
 Thumbnailer               Creates thumbnails for all of the images found under a specific directory
 
 Tipue Search              Serializes generated HTML to JSON that can be used by jQuery plugin - Tipue Search
@@ -240,9 +260,16 @@ Touch                     Does a touch on your generated files using the date me
 
 Twitter Bootstrap         Defines some rst directive that enable a clean usage of the twitter bootstrap CSS and Javascript components
 
+txt2tags_reader           Reader that renders txt2tags markup in content
+
+Video Privacy Enhancer    Increases user privacy by stopping YouTube, Google, et al from placing cookies via embedded video
+
 W3C validate              Submits generated HTML content to the W3C Markup Validation Service
+
+Yuicompressor             Minify CSS and JS files on building step
 ========================  ===========================================================
 
+__ https://ace.c9.io
 
 Please refer to the ``Readme`` file in a plugin's folder for detailed information about
 that plugin.
